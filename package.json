@@ -1,16 +1,16 @@
 {
   "private": true,
-  "displayName": "Plugin Name",
-  "name": "homebridge-plugin-name",
-  "version": "1.0.0",
-  "description": "A short description about what your plugin does.",
+  "displayName": "Homebridge Valve for GPIO",
+  "name": "homebridge-gpio-valve",
+  "version": "0.0.1",
+  "description": "This plugin maps GPIO as Valve in HomeKit.",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/USERNAME/GITHUB_PROJECT_NAME.git"
+    "url": "git://github.com/spobel/homebridge-gpio-valve.git"
   },
   "bugs": {
-    "url": "https://github.com/USERNAME/GITHUB_PROJECT_NAME/issues"
+    "url": "https://github.com/spobel/homebridge-gpio-valve/issues"
   },
   "engines": {
     "node": ">=10.17.0",
@@ -19,14 +19,15 @@
   "main": "dist/index.js",
   "scripts": {
     "lint": "eslint src/**.ts --max-warnings=0",
-    "watch": "npm run build && npm link && nodemon",
+    "watch": "npm run build && npm link && homebridge -D",
     "build": "rimraf ./dist && tsc",
     "prepublishOnly": "npm run lint && npm run build"
   },
   "keywords": [
-    "homebridge-plugin"
+    "homebridge-plugin",
+    "sprinkler",
+    "valve"
   ],
-  "dependencies": {},
   "devDependencies": {
     "@types/node": "^14.14.31",
     "@typescript-eslint/eslint-plugin": "^4.16.1",
